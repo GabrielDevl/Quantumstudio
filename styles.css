@@ -32,6 +32,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* permite que quebre linha no mobile */
 }
 
 .logo {
@@ -62,6 +63,7 @@ body {
   padding: 1rem 2rem;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 12px;
+  max-width: 90%; /* evitar estourar a tela no mobile */
 }
 
 .banner-texto h2 {
@@ -84,6 +86,8 @@ body {
   list-style: none;
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav a {
@@ -199,11 +203,27 @@ h3 {
 }
 
 /* Responsividade */
-
 @media (max-width: 768px) {
   .nav ul {
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .header-flex {
+    justify-content: center;
+  }
+
+  .banner-texto {
+    padding: 1rem 1.5rem;
+    max-width: 95%;
+  }
+
+  .banner-texto h2 {
+    font-size: 1.6rem;
+  }
+
+  .banner-texto p {
+    font-size: 1rem;
   }
 
   .hero h2 {
@@ -213,8 +233,30 @@ h3 {
   .hero p {
     font-size: 1rem;
   }
-  
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 3rem 1rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
   .whatsapp-label {
-    display: none; /* Esconde texto no mobile para não poluir */
+    display: none; /* Esconder texto para poupar espaço no mobile */
+  }
+
+  .whatsapp-float {
+    width: 40px;
+    height: 40px;
+  }
+
+  .whatsapp-float img {
+    width: 20px;
+    height: 20px;
   }
 }
