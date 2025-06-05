@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mensagem enviada - Quantum Studio</title>
+
+  <!-- Fonte Inter e CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <section class="contato animate-on-scroll">
+    <div class="container">
+      <h3>Obrigado pelo contato!</h3>
+      <p>Recebemos sua mensagem com sucesso. Em breve entraremos em contato com você 😊</p>
+      <a href="index.html" class="btn">Voltar para o início</a>
+    </div>
+  </section>
+
+  <!-- Script de animação ao scroll -->
+  <script>
+    function animaScroll() {
+      const elementos = document.querySelectorAll('.animate-on-scroll');
+      const windowTop = window.pageYOffset + window.innerHeight * 0.85;
+
+      elementos.forEach((elemento) => {
+        if (windowTop > elemento.offsetTop) {
+          elemento.classList.add('ativo');
+        } else {
+          elemento.classList.remove('ativo');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', animaScroll);
+    animaScroll();
+  </script>
+</body>
+</html>
